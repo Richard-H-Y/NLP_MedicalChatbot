@@ -49,7 +49,7 @@ def load_models_and_data():
     all_stopwords = indonesian_stopwords | english_stopwords
 
     # Load Data Dataset Anda (Pastikan file CSV ini sefolder dengan file app.py)
-    df = pd.read_csv("re_train_embeds.csv")
+    df = pd.read_csv("data/re_train_embeds.csv")
     
     def parse_tags(raw):
         return [t.strip() for t in re.findall(r"'([^']*)'", str(raw)) if t.strip()]
